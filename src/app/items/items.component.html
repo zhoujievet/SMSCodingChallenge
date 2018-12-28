@@ -1,0 +1,38 @@
+<!-- date picker 1-->
+<mat-form-field>
+    <input matInput [max]="endDate" [matDatepicker]="picker1" placeholder="Choose Start Date"
+        (dateChange)="startDateChangeEvent('change', $event)">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+</mat-form-field>
+
+<!-- date picker 2-->
+<mat-form-field>
+    <input matInput [min]="startDate" [matDatepicker]="picker2" placeholder="Choose End Date"
+            (dateChange)="endDateChangeEvent('change', $event)">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+</mat-form-field>
+
+<!-- items table-->
+<table matSort (matSortChange)="sortData($event)">
+    <tr>
+      <th mat-sort-header="id">ID</th>
+      <th mat-sort-header="city">City</th>
+      <th mat-sort-header="start_date">Start Date</th>
+      <th mat-sort-header="end_date">End Date</th>
+      <th mat-sort-header="price">price</th>
+      <th mat-sort-header="status">Status</th>
+      <th mat-sort-header="color">Color</th>
+    </tr>
+  
+    <tr *ngFor="let item of sortedItem">
+      <td>{{item.id}}</td>
+      <td>{{item.city}}</td>
+      <td>{{item.start_date.slice(0,10)}}</td> <!-- slice first 10 character-->
+      <td>{{item.end_date.slice(0,10)}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.status}}</td>
+      <td [style.background]=item.color>{{item.color}}</td>
+    </tr>
+</table>
