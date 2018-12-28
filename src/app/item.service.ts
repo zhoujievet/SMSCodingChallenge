@@ -25,7 +25,7 @@ export class ItemService {
     this.messageService.add(`ItemService: ${message}`);
   }
 
-  private itemsUrl = 'http://localhost:4040/api/item';  // URL to web api
+  private itemsUrl = '/api/item';  // URL to web api
 
   getItems(): Observable<Item[]> {
     this.messageService.add('ItemService: fetched items');
