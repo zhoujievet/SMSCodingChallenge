@@ -1,6 +1,7 @@
 ## Welcome to SMSCodingChallenge
 SMSCodingChallenge is a small app which contains a node server provide CRUD functions to a mongodb based object,
 and an Angular frontend display the data in a sortable table.
+Demo: http://www.botech-technologie.de:4040/
 
 ### Pre-requisites
 * git - [Installation guide](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/) .  
