@@ -1,10 +1,10 @@
 const Item = require('../models/item.model');
 
 /**
- * Get all items
+ * Get list of items
  * @param req
  * @param res
- * @returns void
+ * @returns return all the items without startdate and enddate parameter
  */
 function getItems(req, res) {
   var startDate = new Date(0); //Thu Jan 01 1970 00:00:00 UTC

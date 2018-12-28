@@ -5,7 +5,7 @@ const ItemController = require('../controllers/item.controller');
 // Get list of Items
 router.get( '/', ItemController.getItems);
 
-// Get one spare by cuid
+// Get one item by cuid
 router.get('/:id', ItemController.getItem);
 
 // Add a new Item
